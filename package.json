@@ -1,0 +1,43 @@
+{
+  "name": "mui-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/lab": "^5.0.0-alpha.83",
+    "@mui/material": "^5.4.2",
+    "@mui/utils": "^5.11.13",
+    "@mui/x-data-grid": "^5.8.0",
+    "fast-glob": "^3.2.12",
+    "i18next": "^22.4.11",
+    "material-ui-popup-state": "^5.0.5",
+    "mdi-material-ui": "^7.6.0",
+    "mui-layout-component": "^0.5.3",
+    "prop-types": "^15.8.1",
+    "react-hook-form": "^7.30.0",
+    "react-i18next": "^12.2.0",
+    "react-router-dom": "^6.9.0",
+    "mui-form-hook": "^0.6.5",
+    "ref-component": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "babel-plugin-import": "^1.13.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "svg-country-flags": "^1.2.10",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.4",
+    "vite-plugin-svg-icons": "^2.0.1"
+  }
+}
