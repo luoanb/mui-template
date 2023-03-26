@@ -16,15 +16,15 @@ specifiers:
   i18next: ^22.4.11
   material-ui-popup-state: ^5.0.5
   mdi-material-ui: ^7.6.0
-  mui-form-hook: ^0.6.5
-  mui-layout-component: ^0.5.3
+  mui-form-hook: ^0.6.6
+  mui-layout-component: ^0.5.4
   prop-types: ^15.8.1
   react: ^18.2.0
   react-dom: ^18.2.0
   react-hook-form: ^7.30.0
   react-i18next: ^12.2.0
   react-router-dom: ^6.9.0
-  ref-component: ^1.1.0
+  ref-component: ^1.1.1
   svg-country-flags: ^1.2.10
   typescript: ^4.9.3
   vite: ^4.1.4
@@ -42,13 +42,13 @@ dependencies:
   i18next: 22.4.12
   material-ui-popup-state: 5.0.5_xqeqsl5kvjjtyxwyi3jhw3yuli
   mdi-material-ui: 7.6.0_ik4b5hzdck3rkdxifgjbtolpti
-  mui-form-hook: 0.6.5_o7kgiiqrdo5zzkgior4xvydgfu
-  mui-layout-component: 0.5.3_o7kgiiqrdo5zzkgior4xvydgfu
+  mui-form-hook: 0.6.6_o7kgiiqrdo5zzkgior4xvydgfu
+  mui-layout-component: 0.5.4_o7kgiiqrdo5zzkgior4xvydgfu
   prop-types: 15.8.1
   react-hook-form: 7.43.7_react@18.2.0
   react-i18next: 12.2.0_ifcy7d6sq4oet2tbyvl27swb2m
   react-router-dom: 6.9.0_biqbaboplfbrettd7655fr4n2y
-  ref-component: 1.1.0_d2lgyfpecxdc2bsiwyag5wf7ti
+  ref-component: 1.1.1_d2lgyfpecxdc2bsiwyag5wf7ti
 
 devDependencies:
   '@types/react': 18.0.28
@@ -1835,8 +1835,8 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
-  /mui-form-hook/0.6.5_o7kgiiqrdo5zzkgior4xvydgfu:
-    resolution: {integrity: sha512-vtYA+ihZLgfMTLj7wh/u3Hxibb5bKRzEEKCtrmn1ob3ZCcM0czCXqKuja5p2eBmv7yAOeSw6m5Tjc1odXrA+DA==}
+  /mui-form-hook/0.6.6_o7kgiiqrdo5zzkgior4xvydgfu:
+    resolution: {integrity: sha512-QncNk5BCBpQ1K2RV04Pzum96i5zqxGjk6Dk9nr6R/W212DdD47T9+YPw4daFq/ubBzKmH6p3TVDpoI2nvFLdQw==}
     peerDependencies:
       '@emotion/react': '*'
       '@emotion/styled': '*'
@@ -1865,8 +1865,8 @@ packages:
       uuid: 9.0.0
     dev: false
 
-  /mui-layout-component/0.5.3_o7kgiiqrdo5zzkgior4xvydgfu:
-    resolution: {integrity: sha512-jCm3WB6l7CqxXJhiJzeKGKMGq6GcUpb7VKb4R2qna3x59lgH7SjfD1D5mHMzXM/gRtGQlXmGc2TGymJefb8/wQ==}
+  /mui-layout-component/0.5.4_o7kgiiqrdo5zzkgior4xvydgfu:
+    resolution: {integrity: sha512-QVjGyFLXkSsv2Rc8dWfthE30b2gFrlEpaabmxbBb1++hx1t61FOF33lcJBVv2INnPFk9CmG5Sls5UYEhyxsXRQ==}
     peerDependencies:
       '@emotion/react': '*'
       '@emotion/styled': '*'
@@ -1892,7 +1892,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-hook-form: 7.43.7_react@18.2.0
-      ref-component: 1.1.0_d2lgyfpecxdc2bsiwyag5wf7ti
+      ref-component: 1.1.1_d2lgyfpecxdc2bsiwyag5wf7ti
       uuid: 9.0.0
     dev: false
 
@@ -2182,8 +2182,8 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /ref-component/1.1.0_d2lgyfpecxdc2bsiwyag5wf7ti:
-    resolution: {integrity: sha512-onQRTKlWFeR4TSSXD3+erIZCIAOYf7qTsJzsM8oYgiFxqR+uWsHvqfw7CqRPcUfxa5n29czJITYzPAeh0Nbjdg==}
+  /ref-component/1.1.1_d2lgyfpecxdc2bsiwyag5wf7ti:
+    resolution: {integrity: sha512-QQuw/l9vv4YLN4B5UjoOzKmRt2sKGqFu58pPAjkWV+NVjZnkJSrwE2pYcOCqoNsZu2txaIrbya09r5OlJwSfKg==}
     peerDependencies:
       '@emotion/react': '*'
       '@emotion/styled': '*'

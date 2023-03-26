@@ -20,13 +20,13 @@
     "i18next": "^22.4.11",
     "material-ui-popup-state": "^5.0.5",
     "mdi-material-ui": "^7.6.0",
-    "mui-layout-component": "^0.5.3",
+    "mui-form-hook": "^0.6.6",
+    "mui-layout-component": "^0.5.4",
     "prop-types": "^15.8.1",
     "react-hook-form": "^7.30.0",
     "react-i18next": "^12.2.0",
     "react-router-dom": "^6.9.0",
-    "mui-form-hook": "^0.6.5",
-    "ref-component": "^1.1.0"
+    "ref-component": "^1.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
