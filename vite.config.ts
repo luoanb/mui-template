@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), svgPlugin],
   base: "./",
   server: {
-    port: 80,
+    // port: 80,
   },
   build: {
     commonjsOptions: {
