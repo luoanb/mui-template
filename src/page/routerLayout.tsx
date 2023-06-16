@@ -1,6 +1,4 @@
-import { PropsWithChildren } from "react";
-
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import { Dashboard } from "mui-layout-component";
 import { Outlet } from "react-router-dom";
 
@@ -14,7 +12,10 @@ import { Design } from "../design/design";
 export const RouterDashboard = () => {
   return (
     <Dashboard nav={<Nav />} header={<Header />} design={<Design />}>
-      <Container maxWidth="lg" sx={(theme) => ({ pt: theme.spacing(4) })}>
+      <Container
+        maxWidth="lg"
+        sx={(theme) => ({ p: theme.spacing(4), height: "100%" })}
+      >
         <Outlet />
       </Container>
     </Dashboard>

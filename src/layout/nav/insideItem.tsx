@@ -1,13 +1,13 @@
-import { useContext, lazy } from "react";
-import { DashboardState, GroupTitle } from "mui-layout-component";
+import React, { useContext } from "react";
 import PopupState, { bindHover, bindPopper } from "material-ui-popup-state";
 import Fade from "@mui/material/Fade";
 import IconButton from "@mui/material/IconButton";
 import { MuiTree } from "mui-form-hook";
-import { Paper, Tooltip, Typography, Popper } from "@mui/material";
+import { Paper, Tooltip, Typography } from "@mui/material";
 import { customLabelText } from ".";
 import { Link } from "../../component/nextLink";
-// const Popper = lazy(() => import("@mui/material/Popper"));
+import { DashboardState, GroupTitle } from "mui-layout-component";
+import Popper from "@mui/material/Popper"
 
 interface InsideItemProps {
   item: any;
