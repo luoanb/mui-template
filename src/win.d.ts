@@ -1,0 +1,3 @@
+declare interface Window {
+  BASE_URL: string;
+}

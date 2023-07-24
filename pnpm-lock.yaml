@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -32,6 +32,9 @@ dependencies:
   i18next:
     specifier: ^22.4.11
     version: 22.4.12
+  material-ui-confirm:
+    specifier: ^3.0.9
+    version: 3.0.9(@mui/material@5.11.13)(react-dom@18.2.0)(react@18.2.0)
   material-ui-popup-state:
     specifier: ^5.0.5
     version: 5.0.5(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
@@ -39,8 +42,11 @@ dependencies:
     specifier: ^7.6.0
     version: 7.6.0(@mui/material@5.11.13)(react@18.2.0)
   mui-layout-component:
-    specifier: ^0.5.4
-    version: 0.5.4(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react-hook-form@7.43.7)(react@18.2.0)
+    specifier: ^1.0.4
+    version: 1.0.4(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react-hook-form@7.43.7)(react@18.2.0)
+  notistack:
+    specifier: ^3.0.1
+    version: 3.0.1(csstype@3.1.1)(react-dom@18.2.0)(react@18.2.0)
   prop-types:
     specifier: ^15.8.1
     version: 15.8.1
@@ -56,9 +62,6 @@ dependencies:
   ref-component:
     specifier: ^1.1.1
     version: 1.1.1(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react@18.2.0)
-  xlsx:
-    specifier: https://cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz
-    version: '@cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz'
 
 devDependencies:
   '@faker-js/faker':
@@ -742,6 +745,7 @@ packages:
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -751,6 +755,7 @@ packages:
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: true
     optional: true
@@ -760,6 +765,7 @@ packages:
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -769,6 +775,7 @@ packages:
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: true
     optional: true
@@ -1433,6 +1440,14 @@ packages:
       is-glob: 4.0.3
     dev: false
 
+  /goober@2.1.13(csstype@3.1.1):
+    resolution: {integrity: sha512-jFj3BQeleOoy7t93E9rZ2de+ScC4lQICLwiAQmKMg9F6roKGaLSHoCDYKkWlSafg138jejvq/mTdvmnwDQgqoQ==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: 3.1.1
+    dev: false
+
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: true
@@ -1749,6 +1764,18 @@ packages:
       object-visit: 1.0.1
     dev: true
 
+  /material-ui-confirm@3.0.9(@mui/material@5.11.13)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-WEAEG9z4MfwojoUyQiAjrjl8378tYbGKfiwOKz3zHaQKyXcHnFktUmV7b+F+G0yVo8kYrEMk9Bw+HxhA/2Enlw==}
+    peerDependencies:
+      '@mui/material': '>= 5.0.0'
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+    dependencies:
+      '@mui/material': 5.11.13(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /material-ui-popup-state@5.0.5(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-ZFEazmfaeDOeG5KFOfwEpzlL0HlRE1tVqwGkSuSMhGlz9/apAHfixIBR3oIJYVroTcgdUmBtKcS01QqEq/rg0A==}
     peerDependencies:
@@ -1871,8 +1898,8 @@ packages:
       uuid: 9.0.0
     dev: true
 
-  /mui-layout-component@0.5.4(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react-hook-form@7.43.7)(react@18.2.0):
-    resolution: {integrity: sha512-QVjGyFLXkSsv2Rc8dWfthE30b2gFrlEpaabmxbBb1++hx1t61FOF33lcJBVv2INnPFk9CmG5Sls5UYEhyxsXRQ==}
+  /mui-layout-component@1.0.4(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react-hook-form@7.43.7)(react@18.2.0):
+    resolution: {integrity: sha512-uGjN9aSIZZJz98F4PFEfYyDReQq5L4YnAaQKaunBtdK/y62JaNxDLKBSgCjlaN+teenWKDgZAnd+RgVf4OO6rA==}
     peerDependencies:
       '@emotion/react': '*'
       '@emotion/styled': '*'
@@ -1898,7 +1925,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-hook-form: 7.43.7(react@18.2.0)
-      ref-component: 1.1.1(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react@18.2.0)
+      ref-component: 1.1.3(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react@18.2.0)
       uuid: 9.0.0
     dev: false
 
@@ -1926,6 +1953,21 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /notistack@3.0.1(csstype@3.1.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ntVZXXgSQH5WYfyU+3HfcXuKaapzAJ8fBLQ/G618rn3yvSzEbnOB8ZSOwhX+dAORy/lw+GC2N061JA0+gYWTVA==}
+    engines: {node: '>=12.0.0', npm: '>=6.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      clsx: 1.2.1
+      goober: 2.1.13(csstype@3.1.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - csstype
+    dev: false
 
   /nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
@@ -2185,6 +2227,27 @@ packages:
 
   /ref-component@1.1.1(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react@18.2.0):
     resolution: {integrity: sha512-QQuw/l9vv4YLN4B5UjoOzKmRt2sKGqFu58pPAjkWV+NVjZnkJSrwE2pYcOCqoNsZu2txaIrbya09r5OlJwSfKg==}
+    peerDependencies:
+      '@emotion/react': '*'
+      '@emotion/styled': '*'
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/react':
+        optional: true
+      '@emotion/styled':
+        optional: true
+      '@types/react':
+        optional: true
+    dependencies:
+      '@emotion/react': 11.10.6(@types/react@18.0.28)(react@18.2.0)
+      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.28)(react@18.2.0)
+      '@types/react': 18.0.28
+      react: 18.2.0
+    dev: false
+
+  /ref-component@1.1.3(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react@18.2.0):
+    resolution: {integrity: sha512-3OPvEJyVphivMp/zzi40agQw+oX2Ua48IP57l/lJlnBA2MBvzxVmlqR5SFk6M+s0c7+t3yR92rh5il9fWrQqmg==}
     peerDependencies:
       '@emotion/react': '*'
       '@emotion/styled': '*'
@@ -2607,11 +2670,3 @@ packages:
   /yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-
-  '@cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz':
-    resolution: {tarball: https://cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz}
-    name: xlsx
-    version: 0.19.2
-    engines: {node: '>=0.8'}
-    hasBin: true
-    dev: false

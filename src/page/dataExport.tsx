@@ -12,7 +12,7 @@ import { Export, FileExcel, TextBox } from "mdi-material-ui";
 import { DropDown, MuiDataGrid } from "mui-form-hook";
 import { defineComponent } from "ref-component";
 import { UserList } from "../mock/user";
-import * as XLSX from "xlsx";
+import * as XLSX from "../utils/xlsx";
 import { DataGrid, GridColumns } from "@mui/x-data-grid";
 import Print from "@mui/icons-material/Print";
 import MenuUp from "mdi-material-ui/MenuUp";
