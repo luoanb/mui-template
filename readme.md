@@ -1,6 +1,6 @@
 # MUI Dashboard Template
-![MUI-Template](./docs/mui-template.png)
-![MUI-Template2](./docs/mui-template2.png)
+![MUI-Template](./doc/mui-template.png)
+![MUI-Template2](./doc/mui-template2.png)
 
 ## Features[特征]
 * React
@@ -42,9 +42,9 @@ to start database, connect to it in file
 pnpm dev
 ```
 ## Screenshots[截图]
-![MUI-Template3](./docs/mui-template3.png)
-![MUI-Template4](./docs/mui-template4.png)
-|  ![MUI-Template5](./docs/mui-template5.png)| ![MUI-Template6](./docs/mui-template6.png) |
+![MUI-Template3](./doc/mui-template3.png)
+![MUI-Template4](./doc/mui-template4.png)
+|  ![MUI-Template5](./doc/mui-template5.png)| ![MUI-Template6](./doc/mui-template6.png) |
 | --- | --- |
 
 ## License[协议]
