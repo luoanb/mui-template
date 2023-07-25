@@ -43,5 +43,16 @@
     "typescript": "^4.9.3",
     "vite": "^4.1.4",
     "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "keywords": [
+    "typescript",
+    "dashboard",
+    "react",
+    "admin",
+    "vite"
+  ],
+  "author": {
+    "name": "LuoAnbing",
+    "email": "luoanb@163.com"
   }
 }
