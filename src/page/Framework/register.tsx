@@ -25,8 +25,8 @@ import Twitter from "mdi-material-ui/Twitter";
 import Facebook from "mdi-material-ui/Facebook";
 import EyeOutline from "mdi-material-ui/EyeOutline";
 import EyeOffOutline from "mdi-material-ui/EyeOffOutline";
-import { Link } from "../component/nextLink";
-import { FooterIllustrationsV1 } from "../component/FooterIllustration";
+import { Link } from "../../component/nextLink";
+import { FooterIllustrationsV1 } from "../../component/FooterIllustration";
 
 interface State {
   password: string;

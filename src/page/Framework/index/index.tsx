@@ -15,9 +15,9 @@ import StatisticsCard from "./StatisticsCard";
 import WeeklyOverview from "./WeeklyOverview";
 import DepositWithdraw from "./DepositWithdraw";
 import SalesByCountries from "./SalesByCountries";
-import { ApexChartWrapper } from "../../component/apexChartWrapper";
+import { ApexChartWrapper } from "../../../component/apexChartWrapper";
 
-import CardStatisticsVerticalComponent from "../../component/cardStatsVertical";
+import CardStatisticsVerticalComponent from "../../../component/cardStatsVertical";
 
 export type ThemeColor =
   | "primary"

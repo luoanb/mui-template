@@ -30,9 +30,9 @@ import EyeOutline from "mdi-material-ui/EyeOutline";
 import EyeOffOutline from "mdi-material-ui/EyeOffOutline";
 
 // ** Demo Imports
-import { BlankLayout } from "./routerLayout";
-import { FooterIllustrationsV1 } from "../component/FooterIllustration";
-import { Link } from "../component/nextLink";
+import { BlankLayout } from "../routerLayout";
+import { FooterIllustrationsV1 } from "../../component/FooterIllustration";
+import { Link } from "../../component/nextLink";
 
 interface State {
   password: string;

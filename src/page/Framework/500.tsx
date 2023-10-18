@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Box, { BoxProps } from "@mui/material/Box";
-import FooterIllustrations from "../component/FooterIllustrations";
-import { Link } from "../component/nextLink";
+import FooterIllustrations from "../../component/FooterIllustrations";
+import { Link } from "../../component/nextLink";
 
 // ** Styled Components
 const BoxWrapper = styled(Box)<BoxProps>(({ theme }) => ({

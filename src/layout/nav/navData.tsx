@@ -50,6 +50,12 @@ const getNavData = (t: any) => {
           icon: <BarChart sx={sx} />,
         },
         {
+          id: "c-1",
+          title: "测试页面",
+          path: "/dashboard/monitor",
+          icon: <BarChart sx={sx} />,
+        },
+        {
           id: "1-1",
           title: getNavT("DataExport"),
           path: "/dashboard/DataExport",

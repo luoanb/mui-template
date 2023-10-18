@@ -1,10 +1,13 @@
+
 // ** MUI Components
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Box, { BoxProps } from "@mui/material/Box";
-import FooterIllustrations from "../component/FooterIllustrations";
-import { Link } from "../component/nextLink";
+import FooterIllustrations from "../../component/FooterIllustrations";
+import { Link } from "../../component/nextLink";
+
+
 
 // ** Styled Components
 const BoxWrapper = styled(Box)<BoxProps>(({ theme }) => ({
@@ -27,7 +30,16 @@ const Img = styled("img")(({ theme }) => ({
   },
 }));
 
-const Error401 = () => {
+const TreeIllustration = styled("img")(({ theme }) => ({
+  left: 0,
+  bottom: "5rem",
+  position: "absolute",
+  [theme.breakpoints.down("lg")]: {
+    bottom: 0,
+  },
+}));
+
+const Error404 = () => {
   return (
     <Box className="content-center">
       <Box
@@ -40,21 +52,21 @@ const Error401 = () => {
         }}
       >
         <BoxWrapper>
-          <Typography variant="h1">401</Typography>
+          <Typography variant="h1">404</Typography>
           <Typography
             variant="h5"
             sx={{ mb: 1, fontSize: "1.5rem !important" }}
           >
-            You are not authorized! 🔐
+            Page Not Found ⚠️
           </Typography>
           <Typography variant="body2">
-            You don&prime;t have permission to access this page. Go Home!
+            We couldn&prime;t find the page you are looking for.
           </Typography>
         </BoxWrapper>
         <Img
           height="487"
           alt="error-illustration"
-          src="./images/pages/401.png"
+          src="./images/pages/404.png"
         />
         <Link href="/">
           <Button component="a" variant="contained" sx={{ px: 5.5 }}>
@@ -62,9 +74,11 @@ const Error401 = () => {
           </Button>
         </Link>
       </Box>
-      <FooterIllustrations />
+      <FooterIllustrations
+        image={<TreeIllustration alt="tree" src="./images/pages/tree.png" />}
+      />
     </Box>
   );
 };
 
-export default Error401;
+export default Error404;
