@@ -11,6 +11,7 @@ const Error500 = React.lazy(() => import("./Framework/500"));
 const Dashboard = React.lazy(() => import("./Framework/index/index"));
 const DataExport = React.lazy(() => import("./Framework/dataExport"));
 const Monitor = React.lazy(() => import("./Feature/Monitor"));
+const PersonList = React.lazy(() => import("./Feature/Person/PersonList"));
 
 export const router = createHashRouter([
   {
@@ -77,6 +78,14 @@ export const router = createHashRouter([
         element: (
           <Suspense fallback={<Box>页面加载中</Box>}>
             <Error500 />
+          </Suspense>
+        ),
+      },
+      {
+        path: "person-list",
+        element: (
+          <Suspense fallback={<Box>页面加载中</Box>}>
+            <PersonList />
           </Suspense>
         ),
       },

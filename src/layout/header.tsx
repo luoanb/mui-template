@@ -10,13 +10,17 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import LangSwitch from "../lang/langSwitch";
 import AccountButton from "../component/accountButton";
+import { useTheme } from "@mui/material";
 
 export default function Header() {
   const { miniNav, setOpenNav, setMiniNav } = useContext(DashboardState);
+  const t = useTheme();
   return (
     <Box sx={{ width: "100%" }}>
       <AppBar position="static" sx={(t) => ({ pl: 0 })}>
-        <Toolbar sx={{ pl: "0 !important" }}>
+        <Toolbar
+          sx={{ pl: `${t.spacing(0)} !important`, ml: `${t.spacing(-0.5)} !important` }}
+        >
           <Stack
             direction="row"
             spacing={2}

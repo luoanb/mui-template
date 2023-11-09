@@ -8,6 +8,7 @@ import Login from "@mui/icons-material/Login";
 import HowToReg from "@mui/icons-material/HowToReg";
 import ErrorIcon from "@mui/icons-material/Error";
 import { SxProps, Theme } from "@mui/material/styles";
+import { Person2 } from "@mui/icons-material";
 
 const ChildIcon = () => (
   <LensIcon
@@ -101,6 +102,25 @@ const getNavData = (t: any) => {
               title: getNavT("500inDashboard"),
               icon: <ChildIcon />,
               path: "/dashboard/500",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "feature1",
+      title: "小说管理",
+      children: [
+        {
+          id: "feature1-1",
+          title: "人员管理",
+          icon: <Person2 />,
+          children: [
+            {
+              id: "feature1-1-1",
+              title: getNavT("dashboard"),
+              path: "/dashboard/person-list",
+              icon: <ChildIcon />,
             },
           ],
         },
