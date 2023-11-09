@@ -18,60 +18,7 @@ import Print from "@mui/icons-material/Print";
 import MenuUp from "mdi-material-ui/MenuUp";
 import DotsVertical from "mdi-material-ui/DotsVertical";
 import { silentPrint } from "../../utils/print";
-
-const bookTypes: XLSX.BookType[] = [
-  "xlsx",
-  "xlsm",
-  "xlsb",
-  "xls",
-  "xla",
-  "biff8",
-  "biff5",
-  "biff2",
-  "xlml",
-  "ods",
-  "fods",
-  "csv",
-  "txt",
-  "sylk",
-  "slk",
-  "html",
-  "dif",
-  "rtf",
-  "prn",
-  "eth",
-  "dbf",
-  "numbers",
-];
-
-const exportMore = (keys: any[]) => {
-  return (
-    <DropDown
-      target={({ open, handleOpen }) => (
-        <Tooltip title="更多导出">
-          <IconButton onClick={handleOpen}>
-            <DotsVertical />
-          </IconButton>
-        </Tooltip>
-      )}
-      downContent={({ handleClose }) => (
-        <Stack sx={{ p: 1 }}>
-          {keys.map((option) => (
-            <MenuItem
-              key={option.key}
-              onClick={() => {
-                option.onClick();
-                handleClose();
-              }}
-            >
-              {option.key}
-            </MenuItem>
-          ))}
-        </Stack>
-      )}
-    />
-  );
-};
+import { DataExportMore, doExport } from "../../utils/XlsxPlus";
 
 const columns1: GridColumns = [
   { field: "id", headerName: "ID" },
@@ -103,27 +50,6 @@ const columns1: GridColumns = [
 export default defineComponent(() => {
   const userList = useMemo(() => UserList(35), []);
   const dataref = useRef<ComponentRef<typeof DataGrid>>(null);
-  /**
-   * 数据导出
-   */
-  const doExport = useCallback(
-    (userList: any[], bookType: XLSX.BookType = "xlsx") => {
-      let ws = XLSX.utils.aoa_to_sheet(
-        userList.map((item: any) => {
-          return Object.keys(item)
-            .filter((key) => Object.hasOwn(item, key))
-            .map((key) => item[key]);
-        })
-      );
-      XLSX.utils.sheet_add_aoa(ws, [Object.keys(userList[0])], {
-        origin: "A1",
-      });
-      let wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, "页一");
-      XLSX.writeFile(wb, "导出文件." + bookType, { bookType: "csv" });
-    },
-    []
-  );
   return {
     element: (
       <Card sx={{ height: "100%", p: "18px", pt: 0 }}>
@@ -164,12 +90,7 @@ export default defineComponent(() => {
                   <TextBox />
                 </IconButton>
               </Tooltip>
-              {exportMore(
-                bookTypes.map((key) => ({
-                  key,
-                  onClick: () => doExport(userList, key),
-                }))
-              )}
+              <DataExportMore data={userList} />
             </>
           }
         />

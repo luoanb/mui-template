@@ -7,10 +7,10 @@ export default function App() {
   const { setThemeByOptions } = useThemeContext();
   useMounted(() => {
     // 设置默认主题
-    // setThemeByOptions(PureLightTheme);
-    setThemeByOptions({
-      palette: { mode: "dark" },
-    });
+    setThemeByOptions(PureLightTheme);
+    // setThemeByOptions({
+    //   palette: { mode: "dark" },
+    // });
   });
   return <Router />;
 }
